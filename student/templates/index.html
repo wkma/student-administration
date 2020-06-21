@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学员管理系统</title>
+</head>
+<body style="background-color:gainsboro">
+<p>
+    {% for student in students %}
+        <h3><li>{{ student.name }} - {{ student.get_status_display }}</li></h3>
+        </p>
+    {% endfor %}
+</ul>
+<hr/>
+<form action = "/" method ="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="Submit" value="Submit" />
+</form>
+{# Hello{{ words }}! #}
+
+</body>
+</html>
